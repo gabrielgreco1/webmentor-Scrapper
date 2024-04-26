@@ -48,9 +48,9 @@ async function main() {
         row
           .querySelector(".TexAlCenter.tamDemaisColunas label")
           .innerText.trim() || "-";
-      console.log(grade);
-      // Adiciona a disciplina e a nota ao objeto
-      data[discipline] = grade;
+        if (grade != '-'){ 
+            data[discipline] = grade;
+        }
     }
     return data
   });
